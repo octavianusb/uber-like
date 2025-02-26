@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "uber-like",
+    "name": "Uber Like",
     "slug": "uber-like",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,29 +8,49 @@
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#2f80ed",
+      "androidNavigationBar": {
+        "backgroundColor": "#2f80ed"
+      }
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.octavianusb.uberlike"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.octavianusb.uberlike"
+    },
+    "androidNavigationBar": {
+      "backgroundColor": "#ffffff"
     },
     "web": {
       "bundler": "metro",
-      "output": "static",
+      "output": "server",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router",
+      [
+        "expo-router",
+        {
+          "origin": "http://localhost:8081/"
+        }
+      ],
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
+          "image": "./assets/images/splash.png",
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#2f80ed",
+          "androidNavigationBar": {
+            "backgroundColor": "#2f80ed"
+          }
         }
       ]
     ],
